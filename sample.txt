@@ -1,0 +1,26 @@
+function cellCode params endparams
+float x
+= x 2
+float y
+= y 3
+float z
+* z x y
+
+bool b
+>= b z 6
+
+jumpif b good
+
+string s
+= s "fail"
+callfunction print void args s z endargs
+
+label good
+string s2
+= s2 "success"
+callfunction print void args s2 z endargs
+
+vector3 v
+= v.r z
+return v endreturn
+endfunction
