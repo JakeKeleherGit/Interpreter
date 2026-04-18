@@ -20,7 +20,8 @@ public class Interpreter
         public String toString() 
         {
             StringBuilder sb = new StringBuilder(op);
-            for (String p : parts) {
+            for (String p : parts) 
+            {
                 sb.append(" ").append(p);
             }
             return sb.toString();
@@ -167,7 +168,7 @@ public class Interpreter
         Program program = new Program();
         int i = 0;
          
-        // walk through the token list and build Command objects 
+        // walk through the token list andbuild Command objects 
         while (i < tokens.size()) 
         {
             String token = tokens.get(i);
@@ -533,7 +534,7 @@ public class Interpreter
     {
         String name = cmd.parts.get(0);
         
-        // the only function my interpreter needs to handle is print
+        // the only function my interpreter handle is print
         if (name.equals("print")) 
         {
             String label = getString(cmd.parts.get(2));

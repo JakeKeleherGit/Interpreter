@@ -1,26 +1,38 @@
 function cellCode params endparams
-float x
-= x 2
-float y
-= y 3
-float z
-* z x y
-
-bool b
->= b z 6
-
-jumpif b good
-
-string s
-= s "fail"
-callfunction print void args s z endargs
-
-label good
-string s2
-= s2 "success"
-callfunction print void args s2 z endargs
-
 vector3 v
-= v.r z
+float f
+= v.r 1
+= v.b 1
+= v.g 1
+string s1
+= s1 "jack"
+= v v
+= v.g v.b
+= f f
+callfunction print args "STRING" v.r endargs
+callfunction print args s1 5 endargs
+callfunction print args s1 f endargs
 return v endreturn
+jump l1
+label l1
+jumpif boolreg l1
+bool b
+string s
+== b v.r v.b
+== b v.r 1
+== b v.r f
+== b v v
+!= b v.b v.r
+& b b1 b2
+| b b1 b2
+! b b1
+> b f f
+>= b f f
+< b f f
+<= b f f
++ v.r 1 1
+- v.r 1 1
+/ v.r 1 1
+* v.r 1 1
+% v.r 1 1
 endfunction
